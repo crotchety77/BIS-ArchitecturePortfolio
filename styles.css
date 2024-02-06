@@ -1,0 +1,66 @@
+/* 
+ширина высота толщина рамки, отступы (padding, margin)
+стандартный закон content-box, но лучше модель вычета border-box
+*/
+.html{
+    box-sizing: border-box;
+}
+/* 
+*-все теги, inherit-как у родителя 
+в каких-то случаях понадобится другая модель, поэтому для этих тегов inherit
+*/
+*, *::after, *::before{
+    box-sizing: inherit;
+    /* Вместо подключения обнуляющих стилей */
+    margin: 0;
+    padding: 0;
+}
+ul{
+    /* Отключение пунктов в списка */
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color:white;
+}
+.wrapper {
+}
+.header {
+}
+.container {
+    background-color:gray;
+    /* 1200+padding*2=1220 */
+    max-width: 1220px;
+    margin: 0 auto;
+    /* Резервирование пространства для адаптива */
+    padding: 0 10px;
+
+}
+.header__inner {
+    /* Делим на 2 столбика */
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-between;
+}
+.logo {
+  
+}
+.logo__img {
+    color:white;
+}
+.menu {
+}
+.menu__list {
+    display:flex;
+    /* Глянуть что за св-во о_0 */
+    gap: 35px;
+}
+.menu__list-item {
+}
+.menu__list-link {
+    
+}
+.main {
+}
+.footer {
+}

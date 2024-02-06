@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "Arial-Narrow";
+    font-style: normal;
+    font-weight: 400;
+  
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("ArialNarrow"),
+         /* Если не получилось, загрузит woff2 */
+         url("/fonts/arialnarrow.ttf") format("ttf"),
+         /* Если браузер не поддерживает woff2, загрузит woff */
+         /* url("/fonts/roboto.woff") format("woff"); */
+  }
 /* 
 ширина высота толщина рамки, отступы (padding, margin)
 стандартный закон content-box, но лучше модель вычета border-box
@@ -15,17 +27,27 @@
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: "Arial-Narrow", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
 ul{
     /* Отключение пунктов в списка */
     list-style: none;
 }
 a {
-    text-decoration: none;
-    color:white;
+    /* Отключение нижнего подчёркивания */
+ 
 }
 .wrapper {
 }
 .header {
+    background-color: black;
+}
+.header-main{
+    /* transparent = прозрачный */
+    background-color: transparent;
 }
 .container {
     background-color:gray;
@@ -39,26 +61,30 @@ a {
 .header__inner {
     /* Делим на 2 столбика */
     display: flex;
-    padding-top: 40px;
+    align-items:center;
+    padding-top: 10px;
     justify-content: space-between;
+    
 }
 .logo {
   
 }
 .logo__img {
-    color:white;
+
 }
 .menu {
 }
 .menu__list {
     display:flex;
+
     /* Глянуть что за св-во о_0 */
     gap: 35px;
 }
 .menu__list-item {
 }
 .menu__list-link {
-    
+    color: white;
+    text-decoration: none;
 }
 .main {
 }

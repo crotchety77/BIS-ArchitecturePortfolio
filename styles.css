@@ -62,7 +62,6 @@ a {
     margin: 0 auto;
     /* Резервирование пространства для адаптива */
     padding: 0 10px;
-
 }
 .header {
     background-color: black;
@@ -71,6 +70,14 @@ a {
     /* transparent = прозрачный */
     /* Только для главной страницы */
     background-color: transparent;
+
+    /* Для главной страницы поднимаем */
+    position: absolute;
+    /* Насколько приподнять */
+    z-index: 5;
+    /* Элементы сплющились и получили позиционирование */
+    left:0;
+    right: 0;
 }
 
 .header__inner {
@@ -80,12 +87,13 @@ a {
     padding-top: 10px;
     padding-bottom: 10px;
     justify-content: space-between;
-    
+
 }
 .logo {
-  
+    height: 64px;
 }
 .logo__img {
+    filter: invert(100%);
 
 }
 .menu {
@@ -106,6 +114,14 @@ a {
 .main {
     /* display:flex; */
     flex-grow: 1;
+}
+.swiper-slide{
+    /* 100% высоты экрана */
+    height: 100vh;
+    /* На него надо наложить фон */
+}
+.swiper-wrapper{
+    background: rgba(255, 0, 0, 0.607);
 }
 
 .footer {

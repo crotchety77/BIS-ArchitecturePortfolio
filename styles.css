@@ -27,11 +27,16 @@
     margin: 0;
     padding: 0;
 }
+/* Для Wrapper ставим 100% высоты родителей */
+html, body{
+    height: 100%;
+}
 body{
     font-family: "Arial-Narrow", "Arial", sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 400;
 }
+
 ul{
     /* Отключение пунктов в списка */
     list-style: none;
@@ -42,9 +47,16 @@ a {
     text-decoration: none;
 }
 .wrapper {
+    /* Расширение на всю страницу */
+    /* 100% от чего? на родителя ориентируется => body тоже надо 100% => html тоже надо 100% */
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* И для main надо прописать grow:1 чтобы он растянулся */
+
 }
 .container {
-    background-color:gray;
+    /* background-color:gray; */
     /* 1200+padding*2=1220 */
     max-width: 1220px;
     margin: 0 auto;
@@ -90,12 +102,32 @@ a {
     color: white;
     text-decoration: none;
 }
+
 .main {
+    /* display:flex; */
+    flex-grow: 1;
 }
+
 .footer {
+    padding-bottom: 20px;
+    /* background-color: transpar; */
 }
 .footer__layout{
     color:black;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.footer__link-url{
+    color: inherit;
+}
+.social-icons{
+    display:flex;
+    gap: 15px;
+}
+.icon__link{
+    height: 40px;
+    width: 40px;
 }
 .icon{
     height: 40px;

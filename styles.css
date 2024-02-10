@@ -38,16 +38,10 @@ ul{
 }
 a {
     /* Отключение нижнего подчёркивания */
- 
+    /* Пришлось поставить т.к. у изображений соцсетей в footer горел снизу фиолетовый прямоугольник */
+    text-decoration: none;
 }
 .wrapper {
-}
-.header {
-    background-color: black;
-}
-.header-main{
-    /* transparent = прозрачный */
-    background-color: transparent;
 }
 .container {
     background-color:gray;
@@ -58,11 +52,21 @@ a {
     padding: 0 10px;
 
 }
+.header {
+    background-color: black;
+}
+.header-main{
+    /* transparent = прозрачный */
+    /* Только для главной страницы */
+    background-color: transparent;
+}
+
 .header__inner {
     /* Делим на 2 столбика */
     display: flex;
     align-items:center;
     padding-top: 10px;
+    padding-bottom: 10px;
     justify-content: space-between;
     
 }
@@ -89,4 +93,12 @@ a {
 .main {
 }
 .footer {
+}
+.footer__layout{
+    color:black;
+}
+.icon{
+    height: 40px;
+    width: 40px;
+    /* font-size: 1000px; */
 }
